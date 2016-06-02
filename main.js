@@ -6,9 +6,9 @@ function testPromise() {
 
     logger.info(thisPromiseCount, "Started", "Sync");
 
-    loginAsync(thisPromiseCount)
-        .then(getParametersAsync)
-        .then(launchGameAsync)
+    demoApi.loginAsync(thisPromiseCount)
+        .then(demoApi.getParametersAsync)
+        .then(demoApi.launchGameAsync)
         .then(onResolved)
         .catch(onRejected);
 
